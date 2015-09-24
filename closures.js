@@ -13,6 +13,9 @@ var outer = function(){
 
 //Once you do that, invoke inner.
 
+  var inner = outer();
+  inner();
+
   //Code Here
 
 
@@ -34,7 +37,8 @@ var callFriend = function(){
 
   //Code Here
 
-
+  var gfriend = callFriend();
+  gfriend('435-215-9248');
 
 //Next Problem
 
@@ -45,6 +49,10 @@ var callFriend = function(){
 */
 
   //Code Here
+  var getcount = 0;
+  function makeCounter() {
+    return getcount + getcount;
+  }
   var count = makeCounter();
   count() // 1
   count() // 2
