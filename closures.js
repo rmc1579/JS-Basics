@@ -49,10 +49,15 @@ var callFriend = function(){
 */
 
   //Code Here
-  var getcount = 0;
-  function makeCounter() {
-    return getcount + getcount;
-  }
+  
+  var makeCounter = function() {
+    var counter = 0;
+    function c(){
+      counter++;
+      return counter;
+    }
+    return c;
+  };
   var count = makeCounter();
   count() // 1
   count() // 2
@@ -72,8 +77,21 @@ var callFriend = function(){
 
   //Code Here
 
+  function one (calledfunction){
+    return newfunction();
+  }
+  function calledfunction(){
 
+  }
+  function newfunction(){
+    var counter = 0;
+    if (counter == 0){
+      counter++;
+      calledfunction();
 
+    }
+    return counter;
+  }
 //Next Problem
 
 
@@ -82,35 +100,51 @@ var callFriend = function(){
   Now, similar to the last problem, write a function called 'fnCounter' that accepts two parameters. The first parameter will be an anonymous function and the second parameter, 'N', will be a number. Now, in 'fnCounter', allow the anonymous funciton to be invoked 'N' number of times. After it's been invoked 'N' number of times, return 'STOP'.
 */
 
+var fun1 = function(){
+
+}
+
+function fnCounter(fun1, N){
+  var counter = 0;
+  
+  for (var i=1; i<=N; i++){
+      fun1();
+  }
+  return "STOP";
+}
 
 
 //Next Problem
 
 
 
-/*
+
   var counter = function(){
-    for (var i=1; i<=5; i++) {
+    
+    for (var i = 1; i<=5; i++) {
       setTimeout( function timer(){
           console.log( i );
       }, i*1000 );
     }
   };
 
-  Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
+  //Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
+
+    //Answer Here
+    //document.write("1","2","3","4");
+
+
+  //Now, run the function in your console and note what happpens.
+
+  //Was your answer right or wrong?
 
     //Answer Here
 
-
-  Now, run the function in your console and note what happpens.
-
-  Was your answer right or wrong?
-
-    //Answer Here
+    //answer wrong
 
 
-  Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
-*/
+  //Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
+/*/
 
     //Code Here
 
