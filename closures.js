@@ -119,14 +119,13 @@ function fnCounter(fun1, N){
 
 
 
-  var counter = function(){
-    
-    for (var i = 1; i<=5; i++) {
+  /*var counter = function(){
+    for (var i=1; i<=5; i++) {
       setTimeout( function timer(){
           console.log( i );
       }, i*1000 );
     }
-  };
+  };*/
 
   //Above you have a function named counter. Examine the function (without running the code) then below write what you expect to happen when the funciton is invoked. *Hint: setTimeout calls a function or evaluates an expression after a specified number of milliseconds.
 
@@ -144,11 +143,22 @@ function fnCounter(fun1, N){
 
 
   //Fix the counter function so that it works the way you expect it to work. (logging 1 then 2 then 3, etc)
-/*/
+//
 
     //Code Here
-
-
+    
+    var counter = function(){
+      
+    for (var i = 1; i<=5; i++) {
+      document.write(i + " ");
+      
+      setTimeout( function timer() {
+          
+          
+          //alert(i);
+      }, 1000 );
+    }
+  };
 
 //Next Problem
 
@@ -165,6 +175,10 @@ function fnCounter(fun1, N){
   funcArray[5]() //5
 
   *Hint: Don't let this fool you. Break down what's really happening here.
+
 */
+
+  var funcArray = [];
+  
 
 
